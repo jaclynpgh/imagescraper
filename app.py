@@ -1,6 +1,6 @@
 #https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask
 
-from flask import Flask,
+from flask import Flask
 from imagescraper import image_scraper
 
 
