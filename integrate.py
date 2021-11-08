@@ -13,7 +13,6 @@ def get_imageAPI(url):
         jsonResponse = response.json()
         # print(jsonResponse) - run to print all of json data
         # grabs image url from json based on index
-
         return jsonResponse
 
     except HTTPError as http_err:
