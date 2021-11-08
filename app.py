@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def home():
-    return "Make GET Request to: "
+    return "Must be a GET Request to pass url; GET https://websiteimagescraper.herokuapp.com/URlpathHERE "
 
 
 @app.route("/<path:query>", methods=['GET'])
