@@ -41,6 +41,6 @@ def image_scraper(site):
 
 
 if __name__ == "__main__":
-    url = input("Enter a website starting with the www.: ")
+    url = input("Enter a website: ")
     results = image_scraper(url)
     print(results)
