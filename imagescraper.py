@@ -16,13 +16,23 @@ def image_scraper(site):
 
     soup = BeautifulSoup(response.text, 'html.parser')
     img_tags = soup.find_all('img')
+    # conditional for sites that use meta dara
+    if len(img_tags) == 0:
+        img_tags = soup.find_all("meta", property="og:image")
+
+
     # create dictionary to add image alt tag and source link
     images = {}
     for img in img_tags:
         try:
             name = img['alt']
             link = img['src']
-            images[name] = link
+            # make sure http:// is appended to url image
+            for i in range(0, len(link)):
+                if link[0] == "h":
+                    images[name] = link
+                else:
+                    images[name] = "http:"+link
         except:
             pass
     return images

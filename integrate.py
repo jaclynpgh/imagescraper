@@ -20,4 +20,3 @@ def get_imageAPI(url):
     except Exception as err:
         print(f'Other error occurred: {err}')
 
-print(get_imageAPI("https://www.cookinglight.com/recipes/vegetarian-green-curry-stew"))
